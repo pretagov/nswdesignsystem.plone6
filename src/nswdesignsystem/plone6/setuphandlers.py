@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+from plone.api.content import create as createContent
+from plone.api.content import delete as deleteContent
+from plone.api.portal import get as getPortal
 from Products.CMFPlone.interfaces import INonInstallable
 from zope.interface import implementer
 
@@ -16,11 +19,52 @@ class HiddenProfiles(object):
         return ["nswdesignsystem.plone6.upgrades"]
 
 
+def create_global_search_page(context):
+    portal = getPortal()
+    search_page = createContent(
+        id="search", type="Document", title="Search", container=portal
+    )
+    search_page.blocks = {
+        "cc6cf326-69b5-42da-b768-0eb89b0a152f": {"@type": "title"},
+        "e633675a-8067-49cb-97c5-b74ac7314f53": {
+            "showSearchInput": True,
+            "@type": "search",
+            "listingBodyTemplate": "default",
+            "showSortOn": True,
+            "sortOnLabel": "Sort by",
+            "sortOnOptions": ["created", "sortable_title"],
+            "variation": "facetsLeftSide",
+            "query": {
+                "query": [
+                    {
+                        "i": "path",
+                        "o": "plone.app.querystring.operation.string.absolutePath",
+                        "v": "/",
+                    }
+                ],
+                "sort_order": "ascending",
+                "b_size": "10",
+            },
+        },
+    }
+    search_page.blocks_layout = {
+        "items": [
+            "cc6cf326-69b5-42da-b768-0eb89b0a152f",
+            "e633675a-8067-49cb-97c5-b74ac7314f53",
+        ]
+    }
+    # TODO: Exclude from navigation
+    # TODO: Set the facets section title to 'Filter results'
+
+
 def post_install(context):
     """Post install script"""
+    create_global_search_page(context)
     # Do something at the end of the installation of this package.
 
 
 def uninstall(context):
     """Uninstall script"""
+    portal = getPortal()
+    deleteContent(portal["search"])
     # Do something at the end of the uninstallation of this package.
