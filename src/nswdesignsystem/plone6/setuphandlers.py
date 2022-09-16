@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from plone.api.content import create as createContent
+from plone.api.content import get as getContent
 from plone.api.content import delete as deleteContent
 from plone.api.portal import get as getPortal
 from Products.CMFPlone.interfaces import INonInstallable
@@ -21,9 +22,12 @@ class HiddenProfiles(object):
 
 def create_global_search_page(context):
     portal = getPortal()
-    search_page = createContent(
-        id="search", type="Document", title="Search", container=portal
-    )
+    search_page = getContent(path="/about")
+
+    if not search_page:
+        search_page = createContent(
+            id="search", type="Document", title="Search", container=portal
+        )
     search_page.blocks = {
         "cc6cf326-69b5-42da-b768-0eb89b0a152f": {"@type": "title"},
         "e633675a-8067-49cb-97c5-b74ac7314f53": {
