@@ -45,10 +45,14 @@ def create_global_search_page(context):
                         "i": "path",
                         "o": "plone.app.querystring.operation.string.absolutePath",
                         "v": "/",
-                    }
+                    },
+                    {
+                        "i": "portal_type",
+                        "o": "plone.app.querystring.operation.selection.none",
+                        "v": ["Image", "File"],
+                    },
                 ],
                 "sort_order": "ascending",
-                "b_size": "10",
             },
         },
     }
