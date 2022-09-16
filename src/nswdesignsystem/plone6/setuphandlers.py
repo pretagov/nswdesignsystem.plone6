@@ -62,8 +62,7 @@ def create_global_search_page(context):
             "e633675a-8067-49cb-97c5-b74ac7314f53",
         ]
     }
-    # TODO: Exclude from navigation
-    # TODO: Set the facets section title to 'Filter results'
+    search_page.exclude_from_nav = True
 
 
 def post_install(context):
