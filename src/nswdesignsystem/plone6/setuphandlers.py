@@ -31,8 +31,9 @@ def create_global_search_page(context):
     search_page.blocks = {
         "cc6cf326-69b5-42da-b768-0eb89b0a152f": {"@type": "title"},
         "e633675a-8067-49cb-97c5-b74ac7314f53": {
-            "showSearchInput": True,
             "@type": "search",
+            "showSearchInput": True,
+            "facetsTitle": "Filter results",
             "listingBodyTemplate": "default",
             "showSortOn": True,
             "sortOnLabel": "Sort by",
