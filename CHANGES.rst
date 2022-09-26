@@ -2,7 +2,13 @@ Changelog
 =========
 
 
-1.0a1 (unreleased)
+0.1.1 (unreleased)
+------------------
+
+- Nothing changed yet.
+
+
+0.1.0 (2022-09-21)
 ------------------
 
 - Initial release.
