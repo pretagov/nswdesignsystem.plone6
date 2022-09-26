@@ -66,7 +66,7 @@ setup(
         ],
     },
     entry_points="""
-    [z3c.autoinclude.plugin]
+    [plone.autoinclude.plugin]
     target = plone
     [console_scripts]
     update_locale = nswdesignsystem.plone6.locales.update:update_locale
