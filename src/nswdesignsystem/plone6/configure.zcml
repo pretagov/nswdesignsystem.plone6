@@ -12,7 +12,7 @@
     Better import explicit packages or configurations ;)
   -->
   <!--<includeDependencies package="." />-->
-
+  <include file="dependencies.zcml" />
   <include package=".browser" />
 
   <include file="permissions.zcml" />

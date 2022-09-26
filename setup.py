@@ -24,7 +24,6 @@ setup(
         "Framework :: Plone :: Addon",
         "Framework :: Plone :: 6.0",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Operating System :: OS Independent",
@@ -53,6 +52,7 @@ setup(
         "z3c.jbot",
         "plone.api>=1.8.4",
         "plone.app.dexterity",
+        "collective.volto.formsupport==2.4.0",
     ],
     extras_require={
         "test": [
@@ -66,7 +66,7 @@ setup(
         ],
     },
     entry_points="""
-    [z3c.autoinclude.plugin]
+    [plone.autoinclude.plugin]
     target = plone
     [console_scripts]
     update_locale = nswdesignsystem.plone6.locales.update:update_locale

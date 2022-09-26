@@ -10,7 +10,7 @@ from nswdesignsystem.plone6.testing import (  # noqa: E501
 )
 
 try:
-    from Products.CMFPlone.utils import get_installer
+    from plone.base.utils import get_installer
 except ImportError:
     get_installer = None
 
@@ -31,6 +31,12 @@ class TestSetup(unittest.TestCase):
     def test_product_installed(self):
         """Test if nswdesignsystem.plone6 is installed."""
         self.assertTrue(self.installer.is_product_installed("nswdesignsystem.plone6"))
+
+    def test_dependencies_installed(self):
+        """Test if nswdesignsystem.plone6 is installed."""
+        self.assertTrue(
+            self.installer.is_product_installed("collective.volto.formsupport")
+        )
 
     def test_browserlayer(self):
         """Test that INswdesignsystemPlone6Layer is registered."""
