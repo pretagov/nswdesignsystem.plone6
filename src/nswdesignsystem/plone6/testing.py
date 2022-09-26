@@ -8,6 +8,7 @@ from plone.app.testing import (
     applyProfile,
 )
 from plone.testing import z2
+from plone.testing.zope import WSGI_SERVER_FIXTURE
 
 import nswdesignsystem.plone6
 
@@ -51,7 +52,7 @@ NSWDESIGNSYSTEM_PLONE6_ACCEPTANCE_TESTING = FunctionalTesting(
     bases=(
         NSWDESIGNSYSTEM_PLONE6_FIXTURE,
         REMOTE_LIBRARY_BUNDLE_FIXTURE,
-        z2.ZSERVER_FIXTURE,
+        WSGI_SERVER_FIXTURE,
     ),
     name="NswdesignsystemPlone6Layer:AcceptanceTesting",
 )
