@@ -53,6 +53,7 @@ setup(
         "plone.api>=1.8.4",
         "plone.app.dexterity",
         "collective.volto.formsupport==2.4.0",
+        "collective.volto.subfooter==1.1.0",
     ],
     extras_require={
         "test": [
