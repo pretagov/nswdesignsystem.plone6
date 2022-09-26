@@ -32,6 +32,12 @@ class TestSetup(unittest.TestCase):
         """Test if nswdesignsystem.plone6 is installed."""
         self.assertTrue(self.installer.is_product_installed("nswdesignsystem.plone6"))
 
+    def test_dependencies_installed(self):
+        """Test if nswdesignsystem.plone6 is installed."""
+        self.assertTrue(
+            self.installer.is_product_installed("collective.volto.formsupport")
+        )
+
     def test_browserlayer(self):
         """Test that INswdesignsystemPlone6Layer is registered."""
         from plone.browserlayer import utils
