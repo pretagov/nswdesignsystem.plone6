@@ -37,6 +37,9 @@ class TestSetup(unittest.TestCase):
         self.assertTrue(
             self.installer.is_product_installed("collective.volto.formsupport")
         )
+        self.assertTrue(
+            self.installer.is_product_installed("collective.volto.subfooter")
+        )
 
     def test_browserlayer(self):
         """Test that INswdesignsystemPlone6Layer is registered."""

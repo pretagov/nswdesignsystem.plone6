@@ -3,5 +3,6 @@
   <version>1000</version>
   <dependencies>
     <dependency>profile-collective.volto.formsupport:default</dependency>
+    <dependency>profile-collective.volto.subfooter:default</dependency>
   </dependencies>
 </metadata>
