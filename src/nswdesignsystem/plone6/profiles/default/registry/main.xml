@@ -9,6 +9,10 @@
     <value>[{"rootPath": "Lower footer", "items": []}]</value>
   </record>
 
+  <!-- Setup control panel -->
+  <records interface="nswdesignsystem.plone6.browser.controlpanel.INSWDesignSystemSettings"
+    prefix="nswdesignsystem" />
+
 
 
 </registry>

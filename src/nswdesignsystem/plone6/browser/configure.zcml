@@ -18,4 +18,13 @@
       directory="static"
       />
 
+  <browser:page name="nswdesignsystem"
+    for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+    class=".controlpanel.NSWDesignSystemControlPanelFormWrapper"
+    permission="cmf.ManagePortal"
+    layer="nswdesignsystem.plone6.interfaces.INswdesignsystemPlone6Layer" />
+
+  <adapter factory="nswdesignsystem.plone6.browser.controlpanel.NSWDesignSystemRegistryConfigletPanel"
+    name="nswdesignsystem" />
+
 </configure>
