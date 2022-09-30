@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1.1 (unreleased)
+0.2.0 (2022-09-30)
 ------------------
 
 - Added collective.volto.formsupport
