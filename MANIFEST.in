@@ -1,6 +1,7 @@
 graft src/nswdesignsystem
 graft docs
 global-exclude *.pyc
+global-exclude .DS_Store
 include *.rst
 include *.txt
 include tox.ini
