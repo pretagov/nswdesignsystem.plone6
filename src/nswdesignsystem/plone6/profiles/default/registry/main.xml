@@ -10,9 +10,9 @@
   </record>
 
   <!-- Setup control panel -->
-  <records interface="nswdesignsystem.plone6.browser.controlpanel.INSWDesignSystemSettings"
+  <records interface="nswdesignsystem.plone6.interfaces.INSWDesignSystemSettings"
     prefix="nswdesignsystem">
-    <record name="nswdesignsystem.breadcrumb_start_depth">
+    <record name="breadcrumb_start_depth">
       <field type="plone.registry.field.Bool">
         <title>Breadcrumb start depth</title>
         <description>What depth in the site to start showing the breadcrumb</description>
@@ -23,7 +23,7 @@
       </field>
       <value>False</value>
     </record>
-    <record name="nswdesignsystem.show_site_title_text">
+    <record name="show_site_title_text">
       <field type="plone.registry.field.Int">
         <title>Show site title name in header</title>
         <description>Whether to show the name of the site next to the site logo</description>
@@ -32,21 +32,21 @@
       </field>
       <value>False</value>
     </record>
-    <record name="nswdesignsystem.linkedin_url">
+    <record name="linkedin_url">
       <field type="plone.registry.field.ASCIILine">
         <title>LinkedIn URL</title>
         <required>False</required>
       </field>
       <value>False</value>
     </record>
-    <record name="nswdesignsystem.youtube_url">
+    <record name="youtube_url">
       <field type="plone.registry.field.ASCIILine">
         <title>YouTube URL</title>
         <required>False</required>
       </field>
       <value>False</value>
     </record>
-    <record name="nswdesignsystem.nsw_brand_dark">
+    <record name="nsw_brand_dark">
       <field type="plone.registry.field.ASCIILine">
         <title>NSW Brand dark colour</title>
         <description>Set the primary colour</description>
