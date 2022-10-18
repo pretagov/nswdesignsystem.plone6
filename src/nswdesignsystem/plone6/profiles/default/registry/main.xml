@@ -54,6 +54,30 @@
       </field>
       <value>False</value>
     </record>
+    <record name="nsw_brand_light">
+      <field type="plone.registry.field.ASCIILine">
+        <title>NSW Brand light colour</title>
+        <description>Set the secondary colour</description>
+        <required>False</required>
+      </field>
+      <value>False</value>
+    </record>
+    <record name="nsw_brand_accent">
+      <field type="plone.registry.field.ASCIILine">
+        <title>NSW Brand accent colour</title>
+        <description>Set the accent colour</description>
+        <required>False</required>
+      </field>
+      <value>False</value>
+    </record>
+    <record name="nsw_brand_supplementary">
+      <field type="plone.registry.field.ASCIILine">
+        <title>NSW Brand supplementary colour</title>
+        <description>Set the supplementary colour</description>
+        <required>False</required>
+      </field>
+      <value>False</value>
+    </record>
   </records>
 
 

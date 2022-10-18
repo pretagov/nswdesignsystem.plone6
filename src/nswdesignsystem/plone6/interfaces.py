@@ -53,6 +53,42 @@ class INSWDesignSystemSettings(ISocialMediaSchema):
             "widgetProps": {"colors": COLOUR_PALETTE},
         },
     )
+    nsw_brand_light = ASCIILine(
+        title="NSW Brand light colour",
+        description="Set the secondary colour",
+        required=False,
+    )
+    directives.widget(
+        "nsw_brand_light",
+        frontendOptions={
+            "widget": "color_picker",
+            "widgetProps": {"colors": COLOUR_PALETTE},
+        },
+    )
+    nsw_brand_accent = ASCIILine(
+        title="NSW Brand accent colour",
+        description="Set the accent colour",
+        required=False,
+    )
+    directives.widget(
+        "nsw_brand_accent",
+        frontendOptions={
+            "widget": "color_picker",
+            "widgetProps": {"colors": COLOUR_PALETTE},
+        },
+    )
+    nsw_brand_supplementary = ASCIILine(
+        title="NSW Brand supplementary colour",
+        description="Set the supplementary colour",
+        required=False,
+    )
+    directives.widget(
+        "nsw_brand_supplementary",
+        frontendOptions={
+            "widget": "color_picker",
+            "widgetProps": {"colors": COLOUR_PALETTE},
+        },
+    )
 
 
 excluded_social_fields = ["share_social_data", "facebook_app_id"]
@@ -76,7 +112,7 @@ INSWDesignSystemSettings.setTaggedValue(
         ),
         Fieldset(
             "independent_fieldset",
-            fields=["show_site_title_text", "nsw_brand_dark"],
+            fields=["show_site_title_text", "nsw_brand_dark", "nsw_brand_light", "nsw_brand_accent", "nsw_brand_supplementary"],
             label="Independent branding",
             description="Settings in here require an independent branding exemption.",
         ),
