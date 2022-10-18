@@ -27,9 +27,8 @@ class NSWSiteSettingsGet(Service):
         try:
             records = {
                 field: api.portal.get_registry_record(
-                    # TODO: Why do I need to manually add the prefix here?
+                    # TODO: Why do I need to manually add the prefix here and why does using the `interface` argument fail?
                     f"nswdesignsystem.{field}",
-                    interface=INSWDesignSystemSettings,
                     default="",
                 )
                 for field in fields
