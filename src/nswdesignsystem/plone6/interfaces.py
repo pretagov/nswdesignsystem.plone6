@@ -112,7 +112,13 @@ INSWDesignSystemSettings.setTaggedValue(
         ),
         Fieldset(
             "independent_fieldset",
-            fields=["show_site_title_text", "nsw_brand_dark", "nsw_brand_light", "nsw_brand_accent", "nsw_brand_supplementary"],
+            fields=[
+                "show_site_title_text",
+                "nsw_brand_dark",
+                "nsw_brand_light",
+                "nsw_brand_accent",
+                "nsw_brand_supplementary",
+            ],
             label="Independent branding",
             description="Settings in here require an independent branding exemption.",
         ),
