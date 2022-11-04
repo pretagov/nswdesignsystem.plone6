@@ -23,6 +23,7 @@ class NSWSiteSettingsGet(Service):
             for field in getFields(INSWDesignSystemSettings)
             if field not in omitted_fields
         ]
+        records = {}
 
         try:
             records = {
@@ -45,6 +46,12 @@ class NSWSiteSettingsGet(Service):
                     message=translate(str(e), context=self.request),
                 )
             }
+
+        site_depth = (
+            len([val for val in self.context.absolute_url_path().split("/") if val]) + 1
+        )
+
+        records["site_depth"] = site_depth
 
         if not records:
             return {}
