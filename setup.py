@@ -52,7 +52,9 @@ setup(
         "z3c.jbot",
         "plone.api>=1.8.4",
         "plone.app.dexterity",
-        "collective.volto.formsupport==2.4.0",
+        "collective.volto.formsupport==2.6.2",
+        "collective.volto.formsupport[recaptcha]",
+        "collective.volto.formsupport[honeypot]",
         "collective.volto.subfooter==1.1.0",
     ],
     extras_require={
