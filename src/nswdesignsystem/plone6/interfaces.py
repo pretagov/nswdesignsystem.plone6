@@ -28,6 +28,10 @@ class INSWDesignSystemSettings(ISocialMediaSchema):
         max=5,
         default=2,
     )
+    acknowledgement_of_country = ASCIILine(
+        title="Acknowledgement of country",
+        required=False,
+    )
     show_site_title_text = Bool(
         title="Show site title name in header",
         description="Whether to show the name of the site next to the site logo",
