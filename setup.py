@@ -14,7 +14,7 @@ long_description = "\n\n".join(
 
 setup(
     name="nswdesignsystem.plone6",
-    version="0.3.1.dev0",
+    version="0.3.1.dev1",
     description="Plone backend package for the NSW Design system",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/
@@ -52,7 +52,7 @@ setup(
         "z3c.jbot",
         "plone.api>=1.8.4",
         "plone.app.dexterity",
-        "collective.volto.formsupport==2.6.2",
+        "collective.volto.formsupport",
         "collective.volto.formsupport[recaptcha]",
         "collective.volto.formsupport[honeypot]",
         "collective.volto.subfooter==1.1.0",
