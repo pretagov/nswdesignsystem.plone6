@@ -4,5 +4,7 @@
   <dependencies>
     <dependency>profile-collective.volto.formsupport:default</dependency>
     <dependency>profile-collective.volto.subfooter:default</dependency>
+    <dependency>profile-ftw.tika:default</dependency>
+    <dependency>profile-collective.elasticsearch:default</dependency>
   </dependencies>
 </metadata>

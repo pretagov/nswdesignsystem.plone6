@@ -56,6 +56,8 @@ setup(
         "collective.volto.formsupport[recaptcha]",
         "collective.volto.formsupport[honeypot]",
         "collective.volto.subfooter==1.1.0",
+        "ftw.tika>=2.10.0",
+        "collective.elasticsearch>=5.0.0",
     ],
     extras_require={
         "test": [
