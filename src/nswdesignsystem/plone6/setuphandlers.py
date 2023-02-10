@@ -49,7 +49,7 @@ def create_global_search_page(context):
                     {
                         "i": "portal_type",
                         "o": "plone.app.querystring.operation.selection.none",
-                        "v": ["Image", "File"],
+                        "v": ["Image"],
                     },
                 ],
                 "sort_order": "ascending",
