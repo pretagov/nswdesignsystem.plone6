@@ -74,5 +74,7 @@ def post_install(context):
 def uninstall(context):
     """Uninstall script"""
     portal = getPortal()
-    deleteContent(portal["search"])
+    search_page = getContent(path="/search")
+    if search_page:
+        deleteContent(search_page)
     # Do something at the end of the uninstallation of this package.
