@@ -47,12 +47,6 @@ class NSWSiteSettingsGet(Service):
                 )
             }
 
-        site_depth = (
-            len([val for val in self.context.absolute_url_path().split("/") if val]) + 1
-        )
-
-        records["site_depth"] = site_depth
-
         if not records:
             return {}
 
