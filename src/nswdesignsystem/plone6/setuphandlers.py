@@ -22,7 +22,7 @@ class HiddenProfiles(object):
 
 def create_global_search_page(context):
     portal = getPortal()
-    search_page = getContent(path="/about")
+    search_page = getContent(path="/search")
 
     if not search_page:
         search_page = createContent(
