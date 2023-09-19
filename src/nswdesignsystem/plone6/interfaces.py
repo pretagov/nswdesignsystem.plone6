@@ -19,8 +19,7 @@ class INswdesignsystemPlone6Layer(IDefaultBrowserLayer):
 
 
 class INSWDesignSystemSettings(ISocialMediaSchema):
-    directives.omitted("share_social_data")
-    directives.omitted("facebook_app_id")
+    # DEFAULT FIELDSET
     breadcrumb_start_depth = Int(
         title="Breadcrumb start depth",
         description="What depth in the site to start showing the breadcrumb",
@@ -32,17 +31,30 @@ class INSWDesignSystemSettings(ISocialMediaSchema):
         title="Acknowledgement of country",
         required=False,
     )
-    show_site_title_text = Bool(
-        title="Show site title name in header",
-        description="Whether to show the name of the site next to the site logo",
-        default=True,
-    )
+
+    # SOCIAL FIELDSET
+    directives.omitted("share_social_data")
+    directives.omitted("facebook_app_id")
     linkedin_url = ASCIILine(
         title="LinkedIn URL",
         required=False,
     )
     youtube_url = ASCIILine(
         title="YouTube URL",
+        required=False,
+    )
+
+    # INDEPENDENT FIELDSET
+    show_site_title_text = Bool(
+        title="Show site title name in header",
+        description="Whether to show the name of the site next to the site logo",
+        default=True,
+        required=False,
+    )
+    show_acknowledgement_of_country = Bool(
+        title="Show acknowledgement of country",
+        description="Whether to show the AOC in the lower footer if providing a custom implementation",
+        default=True,
         required=False,
     )
     nsw_brand_dark = ASCIILine(
@@ -93,6 +105,17 @@ class INSWDesignSystemSettings(ISocialMediaSchema):
             "widgetProps": {"colors": COLOUR_PALETTE},
         },
     )
+    nsw_independent_upper_footer_colour = ASCIILine(
+        title="Upper footer background colour",
+        required=False,
+    )
+    directives.widget(
+        "nsw_independent_upper_footer_colour",
+        frontendOptions={
+            "widget": "color_picker",
+            "widgetProps": {"colors": COLOUR_PALETTE},
+        },
+    )
 
 
 excluded_social_fields = ["share_social_data", "facebook_app_id"]
@@ -118,10 +141,12 @@ INSWDesignSystemSettings.setTaggedValue(
             "independent_fieldset",
             fields=[
                 "show_site_title_text",
+                "show_acknowledgement_of_country",
                 "nsw_brand_dark",
                 "nsw_brand_light",
                 "nsw_brand_accent",
                 "nsw_brand_supplementary",
+                "nsw_independent_upper_footer_colour",
             ],
             label="Independent branding",
             description="Settings in here require an independent branding exemption.",

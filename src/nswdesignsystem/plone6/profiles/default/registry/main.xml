@@ -32,6 +32,15 @@
       </field>
       <value>False</value>
     </record>
+    <record name="show_acknowledgement_of_country">
+      <field type="plone.registry.field.Int">
+        <title>Show acknowledgement of country</title>
+        <description>Whether to show the AOC in the lower footer if providing a custom implementation</description>
+        <required>False</required>
+        <default>True</default>
+      </field>
+      <value>False</value>
+    </record>
     <record name="linkedin_url">
       <field type="plone.registry.field.ASCIILine">
         <title>LinkedIn URL</title>
@@ -74,6 +83,13 @@
       <field type="plone.registry.field.ASCIILine">
         <title>NSW Brand supplementary colour</title>
         <description>Set the supplementary colour</description>
+        <required>False</required>
+      </field>
+      <value>False</value>
+    </record>
+    <record name="nsw_independent_upper_footer_colour">
+      <field type="plone.registry.field.ASCIILine">
+        <title>Upper footer background colour</title>
         <required>False</required>
       </field>
       <value>False</value>
