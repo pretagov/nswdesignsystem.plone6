@@ -1,4 +1,3 @@
-SCHEMA_PREFIX = "nswdesignsystem"
 CONTROL_PANEL_TITLE = "NSW Design System Settings"
 COLOUR_PALETTE = [
     {"name": "grey-01", "label": "Grey 01"},

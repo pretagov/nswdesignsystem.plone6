@@ -2,17 +2,16 @@ from plone.app.registry.browser.controlpanel import (
     ControlPanelFormWrapper,
     RegistryEditForm,
 )
-
 from plone.restapi.controlpanels import RegistryConfigletPanel
-
 from zope.component import adapter
 from zope.interface import Interface
 
-from nswdesignsystem.plone6.constants import (
-    SCHEMA_PREFIX,
-    CONTROL_PANEL_TITLE,
-)
 from nswdesignsystem.plone6.interfaces import INSWDesignSystemSettings
+
+
+# Gives 'nswdesignsystem.plone6.interfaces'. Doing it this way incase we move it later
+SCHEMA_PREFIX = INSWDesignSystemSettings.__identifier__
+CONTROL_PANEL_TITLE = "NSW Design System Settings"
 
 
 class NSWDesignSystemRegistryEditForm(RegistryEditForm):

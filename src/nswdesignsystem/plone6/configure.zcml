@@ -13,6 +13,7 @@
   -->
   <!--<includeDependencies package="." />-->
   <include file="dependencies.zcml" />
+  <include file="upgrades.zcml" />
   <include package=".browser" />
   <include package=".restapi" />
 
