@@ -28,22 +28,22 @@ class NSWSiteSettingsGet(Service):
         try:
             records = {
                 field: api.portal.get_registry_record(
-                    # TODO: Why do I need to manually add the prefix here and why does using the `interface` argument fail?
-                    f"nswdesignsystem.{field}",
+                    field,
+                    interface=INSWDesignSystemSettings,
                     default="",
                 )
                 for field in fields
             }
-        except KeyError as e:
+        except KeyError as _:
             # TODO: Better logging & response of missing key
             return {}
-        except Exception as e:
+        except Exception as error:
             # TODO: Do I need a 400 error?
             self.request.response.setStatus(400)
             return {
                 "error": dict(
-                    type=e.__class__.__name__,
-                    message=translate(str(e), context=self.request),
+                    type=error.__class__.__name__,
+                    message=translate(str(error), context=self.request),
                 )
             }
 
