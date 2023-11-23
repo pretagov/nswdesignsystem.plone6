@@ -10,4 +10,10 @@
     profile="nswdesignsystem.plone6:default"
     handler=".upgrades.upgrade_1000_to_1001" />
 
+  <genericsetup:upgradeDepends title="Add nsw_independent_aoc_colour field to control panel"
+    profile="nswdesignsystem.plone6:default"
+    source="1001"
+    destination="1002"
+    import_steps="plone.app.registry" />
+
 </configure>
