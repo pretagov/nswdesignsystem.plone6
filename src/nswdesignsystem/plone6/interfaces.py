@@ -116,6 +116,17 @@ class INSWDesignSystemSettings(ISocialMediaSchema):
             "widgetProps": {"colors": COLOUR_PALETTE},
         },
     )
+    nsw_independent_aoc_colour = ASCIILine(
+        title="Custom AOC background colour",
+        required=False,
+    )
+    directives.widget(
+        "nsw_independent_aoc_colour",
+        frontendOptions={
+            "widget": "color_picker",
+            "widgetProps": {"colors": COLOUR_PALETTE},
+        },
+    )
 
 
 excluded_social_fields = ["share_social_data", "facebook_app_id"]
@@ -147,6 +158,7 @@ INSWDesignSystemSettings.setTaggedValue(
                 "nsw_brand_accent",
                 "nsw_brand_supplementary",
                 "nsw_independent_upper_footer_colour",
+                "nsw_independent_aoc_colour",
             ],
             label="Independent branding",
             description="Settings in here require an independent branding exemption.",
