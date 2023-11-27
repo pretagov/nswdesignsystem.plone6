@@ -1,13 +1,13 @@
-# -*- coding: utf-8 -*-
 """Setup tests for this package."""
-import unittest
-
-from plone import api
-from plone.app.testing import TEST_USER_ID, setRoles
-
 from nswdesignsystem.plone6.testing import (  # noqa: E501
     NSWDESIGNSYSTEM_PLONE6_INTEGRATION_TESTING,
 )
+from plone import api
+from plone.app.testing import setRoles
+from plone.app.testing import TEST_USER_ID
+
+import unittest
+
 
 try:
     from plone.base.utils import get_installer
@@ -43,9 +43,8 @@ class TestSetup(unittest.TestCase):
 
     def test_browserlayer(self):
         """Test that INswdesignsystemPlone6Layer is registered."""
-        from plone.browserlayer import utils
-
         from nswdesignsystem.plone6.interfaces import INswdesignsystemPlone6Layer
+        from plone.browserlayer import utils
 
         self.assertIn(INswdesignsystemPlone6Layer, utils.registered_layers())
 
@@ -71,8 +70,7 @@ class TestUninstall(unittest.TestCase):
 
     def test_browserlayer_removed(self):
         """Test that INswdesignsystemPlone6Layer is removed."""
-        from plone.browserlayer import utils
-
         from nswdesignsystem.plone6.interfaces import INswdesignsystemPlone6Layer
+        from plone.browserlayer import utils
 
         self.assertNotIn(INswdesignsystemPlone6Layer, utils.registered_layers())

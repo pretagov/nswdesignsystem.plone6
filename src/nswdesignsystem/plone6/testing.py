@@ -1,12 +1,9 @@
-# -*- coding: utf-8 -*-
 from plone.app.robotframework.testing import REMOTE_LIBRARY_BUNDLE_FIXTURE
-from plone.app.testing import (
-    PLONE_FIXTURE,
-    FunctionalTesting,
-    IntegrationTesting,
-    PloneSandboxLayer,
-    applyProfile,
-)
+from plone.app.testing import applyProfile
+from plone.app.testing import FunctionalTesting
+from plone.app.testing import IntegrationTesting
+from plone.app.testing import PLONE_FIXTURE
+from plone.app.testing import PloneSandboxLayer
 from plone.testing import z2
 from plone.testing.zope import WSGI_SERVER_FIXTURE
 

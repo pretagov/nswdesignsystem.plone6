@@ -1,12 +1,9 @@
-from plone.app.registry.browser.controlpanel import (
-    ControlPanelFormWrapper,
-    RegistryEditForm,
-)
+from nswdesignsystem.plone6.interfaces import INSWDesignSystemSettings
+from plone.app.registry.browser.controlpanel import ControlPanelFormWrapper
+from plone.app.registry.browser.controlpanel import RegistryEditForm
 from plone.restapi.controlpanels import RegistryConfigletPanel
 from zope.component import adapter
 from zope.interface import Interface
-
-from nswdesignsystem.plone6.interfaces import INSWDesignSystemSettings
 
 
 # Gives 'nswdesignsystem.plone6.interfaces'. Doing it this way incase we move it later
