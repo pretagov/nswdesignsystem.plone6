@@ -1,9 +1,10 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <rolemap>
   <permissions>
-    <permission name="SiteInfo: Access Site Info"
-      acquire="True">
-      <role name="Anonymous"/>
+    <permission acquire="True"
+                name="SiteInfo: Access Site Info"
+    >
+      <role name="Anonymous" />
     </permission>
   </permissions>
 </rolemap>

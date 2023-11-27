@@ -1,17 +1,15 @@
-# -*- coding: utf-8 -*-
 """Module where all interfaces, events and exceptions live."""
 
+from nswdesignsystem.plone6.constants import COLOUR_PALETTE
 from plone.autoform import directives
 from plone.base.interfaces.controlpanel import ISocialMediaSchema
-from plone.schema import ASCIILine, Bool, Int
+from plone.schema import ASCIILine
+from plone.schema import Bool
+from plone.schema import Int
 from plone.supermodel.interfaces import FIELDSETS_KEY
 from plone.supermodel.model import Fieldset
 from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 from zope.schema import getFields
-
-from nswdesignsystem.plone6.constants import (
-    COLOUR_PALETTE,
-)
 
 
 class INswdesignsystemPlone6Layer(IDefaultBrowserLayer):

@@ -1,19 +1,25 @@
-<configure xmlns="http://namespaces.zope.org/zope"
-  xmlns:plone="http://namespaces.plone.org/plone"
-  xmlns:cache="http://namespaces.zope.org/cache"
-  xmlns:zcml="http://namespaces.zope.org/zcml">
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:cache="http://namespaces.zope.org/cache"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    >
 
-  <plone:service method="GET"
-    name="@nswSiteSettings"
-    for="Products.CMFCore.interfaces.ISiteRoot"
-    factory=".get.NSWSiteSettingsGet"
-    permission="zope2.View" />
+  <plone:service
+      method="GET"
+      factory=".get.NSWSiteSettingsGet"
+      for="Products.CMFCore.interfaces.ISiteRoot"
+      permission="zope2.View"
+      name="@nswSiteSettings"
+      />
 
-  <plone:service method="GET"
-    name="@nswSiteSettings"
-    for="Products.CMFCore.interfaces.IContentish"
-    factory=".get.NSWSiteSettingsGet"
-    permission="zope2.View" />
+  <plone:service
+      method="GET"
+      factory=".get.NSWSiteSettingsGet"
+      for="Products.CMFCore.interfaces.IContentish"
+      permission="zope2.View"
+      name="@nswSiteSettings"
+      />
 
   <!-- TODO: Caching rules for response -->
   <!-- <cache:ruleset ruleset="plone.content.dynamic" for=".get.NSWSiteSettingsGet" /> -->

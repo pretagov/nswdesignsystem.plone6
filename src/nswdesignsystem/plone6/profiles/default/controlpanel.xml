@@ -1,13 +1,14 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <object name="portal_controlpanel">
-  <configlet title="NSW Design System Settings"
-    action_id="nswdesignsystem"
-    appId="nswdesignsystem"
-    category="Products"
-    condition_expr=""
-    icon_expr=""
-    url_expr="string:${portal_url}/@@nswdesignsystem"
-    visible="True">
+  <configlet action_id="nswdesignsystem"
+             appId="nswdesignsystem"
+             category="Products"
+             condition_expr=""
+             icon_expr=""
+             title="NSW Design System Settings"
+             url_expr="string:${portal_url}/@@nswdesignsystem"
+             visible="True"
+  >
     <permission>Manage portal</permission>
   </configlet>
 </object>

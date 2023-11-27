@@ -1,9 +1,15 @@
-<configure xmlns="http://namespaces.zope.org/zope"
-  xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
-  xmlns:i18n="http://namespaces.zope.org/i18n"
-  xmlns:plone="http://namespaces.plone.org/plone"
-  i18n_domain="nswdesignsystem.plone6">
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="nswdesignsystem.plone6"
+    >
 
+  <include package="collective.elasticsearch" />
   <include package="collective.volto.formsupport" />
   <include package="collective.volto.subfooter" />
+  <include package="cusy.restapi.info" />
+  <include package="ftw.tika" />
+
 </configure>

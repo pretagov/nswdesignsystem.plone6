@@ -1,7 +1,8 @@
-# -*- coding: utf-8 -*-
 """Installer for the nswdesignsystem.plone6 package."""
 
-from setuptools import find_packages, setup
+from setuptools import find_packages
+from setuptools import setup
+
 
 long_description = "\n\n".join(
     [
@@ -19,13 +20,15 @@ setup(
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/
     classifiers=[
+        "Development Status :: 4 - Beta",
         "Environment :: Web Environment",
         "Framework :: Plone",
         "Framework :: Plone :: Addon",
         "Framework :: Plone :: 6.0",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
         "Operating System :: OS Independent",
         "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
     ],
@@ -45,28 +48,41 @@ setup(
     package_dir={"": "src"},
     include_package_data=True,
     zip_safe=False,
-    python_requires=">=3.7",
+    python_requires=">=3.9, <3.12",
     install_requires=[
         "setuptools",
         # -*- Extra requirements: -*-
         "z3c.jbot",
+        "plone.app.registry",
+        "plone.autoform",
+        "plone.base",
         "plone.api>=1.8.4",
-        "plone.app.dexterity",
+        "plone.restapi",
+        "plone.supermodel",
+        "Products.GenericSetup",
+        "collective.elasticsearch>=5.0.0",
         "collective.volto.formsupport",
         "collective.volto.formsupport[recaptcha]",
         "collective.volto.formsupport[honeypot]",
         "collective.volto.subfooter==1.1.0",
-        "ftw.tika>=2.10.0",
-        "collective.elasticsearch>=5.0.0",
+        "ftw.tika @ git+ssh://git@github.com/pretagov/ftw.tika@python3#egg=ftw.tika",  # GitHub link needed for python3 support until a release is done
+        "cusy.restapi.info @ git+ssh://git@github.com/pretagov/cusy.restapi.info@create_permission#egg=cusy.restapi.info",  # Required for the permission install.
+        # "ftw.tika>=2.10.0",
+    ],
+    dependency_links=[
+        "https://github.com/pretagov/ftw.tika/tarball/python3#egg=ftw.tika"
+        "https://github.com/pretagov/cusy.restapi.info/tarball/create_permission/master#egg=cusy.restapi.info"
     ],
     extras_require={
         "test": [
             "plone.app.testing",
+            "plone.app.dexterity",
+            "plone.browserlayer",
             # Plone KGS does not use this version, because it would break
             # Remove if your package shall be part of coredev.
             # plone_coredev tests as of 2016-04-01.
             "plone.testing>=5.0.0",
-            "plone.app.contenttypes",
+            "robotsuite",
             "plone.app.robotframework[debug]",
         ],
     },

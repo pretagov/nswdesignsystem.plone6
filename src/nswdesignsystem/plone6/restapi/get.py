@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from nswdesignsystem.plone6.interfaces import INSWDesignSystemSettings
 from nswdesignsystem.plone6.restapi.serializer.nsw_site_settings import serialize_data
 from plone import api
@@ -13,7 +12,7 @@ from zope.schema import getFields
 @implementer(IPublishTraverse)
 class NSWSiteSettingsGet(Service):
     def __init__(self, context, request):
-        super(NSWSiteSettingsGet, self).__init__(context, request)
+        super().__init__(context, request)
 
     def reply(self):
         omitted_fields = INSWDesignSystemSettings.getTaggedValue(OMITTED_KEY)
@@ -34,7 +33,7 @@ class NSWSiteSettingsGet(Service):
                 )
                 for field in fields
             }
-        except KeyError as _:
+        except KeyError:
             # TODO: Better logging & response of missing key
             return {}
         except Exception as error:

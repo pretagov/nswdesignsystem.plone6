@@ -1,14 +1,12 @@
-# -*- coding: utf-8 -*-
-import os
-import unittest
-
-import robotsuite
-from plone.app.testing import ROBOT_TEST_LEVEL
-from plone.testing import layered
-
 from nswdesignsystem.plone6.testing import (  # noqa: E501
     NSWDESIGNSYSTEM_PLONE6_ACCEPTANCE_TESTING,
 )
+from plone.app.testing import ROBOT_TEST_LEVEL
+from plone.testing import layered
+
+import os
+import robotsuite
+import unittest
 
 
 def test_suite():

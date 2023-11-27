@@ -1,6 +1,7 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <registry xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-  i18n:domain="nswdesignsystem.plone6">
+          i18n:domain="nswdesignsystem.plone6"
+>
 
   <!-- -*- extra stuff goes here -*- -->
   <!-- Setup control panel. Prefix defaults to path to inteface + interface name -->

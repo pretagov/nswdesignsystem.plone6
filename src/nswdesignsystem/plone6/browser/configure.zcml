@@ -2,10 +2,14 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:plone="http://namespaces.plone.org/plone"
-    i18n_domain="nswdesignsystem.plone6">
+    i18n_domain="nswdesignsystem.plone6"
+    >
 
   <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
-  <include package="z3c.jbot" file="meta.zcml" />
+  <include
+      package="z3c.jbot"
+      file="meta.zcml"
+      />
   <browser:jbot
       directory="overrides"
       layer="nswdesignsystem.plone6.interfaces.INswdesignsystemPlone6Layer"
@@ -13,18 +17,22 @@
 
   <!-- Publish static files -->
   <plone:static
+      directory="static"
       name="nswdesignsystem.plone6"
       type="plone"
-      directory="static"
       />
 
-  <browser:page name="nswdesignsystem"
-    for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-    class=".controlpanel.NSWDesignSystemControlPanelFormWrapper"
-    permission="cmf.ManagePortal"
-    layer="nswdesignsystem.plone6.interfaces.INswdesignsystemPlone6Layer" />
+  <browser:page
+      name="nswdesignsystem"
+      for="plone.base.interfaces.IPloneSiteRoot"
+      class=".controlpanel.NSWDesignSystemControlPanelFormWrapper"
+      permission="cmf.ManagePortal"
+      layer="nswdesignsystem.plone6.interfaces.INswdesignsystemPlone6Layer"
+      />
 
-  <adapter factory="nswdesignsystem.plone6.browser.controlpanel.NSWDesignSystemRegistryConfigletPanel"
-    name="nswdesignsystem" />
+  <adapter
+      factory="nswdesignsystem.plone6.browser.controlpanel.NSWDesignSystemRegistryConfigletPanel"
+      name="nswdesignsystem"
+      />
 
 </configure>
