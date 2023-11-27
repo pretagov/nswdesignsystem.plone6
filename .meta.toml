@@ -13,3 +13,13 @@ robot_output.xml
 **/report.html
 **test_*/**/output.xml
 """
+
+[github]
+jobs = [
+    "qa",
+    "test",
+    "coverage",
+    "dependencies",
+    "release_ready",
+    "circular",
+]
