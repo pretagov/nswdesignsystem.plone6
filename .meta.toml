@@ -10,5 +10,6 @@ extra_lines = """
 **/robot_*.html
 robot_output.xml
 **/log.html
+**/report.html
 **test_*/**/output.xml
 """
