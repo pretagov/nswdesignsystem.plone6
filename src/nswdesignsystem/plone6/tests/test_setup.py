@@ -3,12 +3,11 @@ from nswdesignsystem.plone6.testing import (  # noqa: E501
     NSWDESIGNSYSTEM_PLONE6_INTEGRATION_TESTING,
 )
 from plone import api
+from plone.app.testing import applyProfile
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
 
 import unittest
-
-from plone.app.testing import applyProfile
 
 
 try:
