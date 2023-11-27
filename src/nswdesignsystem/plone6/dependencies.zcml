@@ -6,6 +6,9 @@
     i18n_domain="nswdesignsystem.plone6"
     >
 
+  <include package="collective.elasticsearch" />
   <include package="collective.volto.formsupport" />
   <include package="collective.volto.subfooter" />
+  <include package="ftw.tika" />
+
 </configure>
