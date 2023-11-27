@@ -8,6 +8,8 @@ from plone.app.testing import TEST_USER_ID
 
 import unittest
 
+from plone.app.testing import applyProfile
+
 
 try:
     from plone.base.utils import get_installer
@@ -27,6 +29,9 @@ class TestSetup(unittest.TestCase):
             self.installer = get_installer(self.portal, self.layer["request"])
         else:
             self.installer = api.portal.get_tool("portal_quickinstaller")
+
+        # TODO: Find out why the setup in `testing.py` isn't working for this profile install
+        applyProfile(self.portal, "nswdesignsystem.plone6:default")
 
     def test_product_installed(self):
         """Test if nswdesignsystem.plone6 is installed."""
