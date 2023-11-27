@@ -33,7 +33,7 @@ class NSWSiteSettingsGet(Service):
                 )
                 for field in fields
             }
-        except KeyError as _:
+        except KeyError:
             # TODO: Better logging & response of missing key
             return {}
         except Exception as error:

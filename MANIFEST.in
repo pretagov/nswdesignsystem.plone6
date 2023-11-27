@@ -1,7 +1,17 @@
 graft src/nswdesignsystem
 graft docs
-global-exclude *.pyc
-global-exclude .DS_Store
 include *.rst
 include *.txt
 include tox.ini
+include .coveragerc
+
+# buildout
+include base.cfg
+include bobtemplate.cfg
+include buildout.cfg
+include test_plone60.cfg
+
+global-exclude *.pyc
+global-exclude .DS_Store
+# Don't include unreleased changelogs
+prune news

@@ -6,7 +6,7 @@ from zope.component import adapter
 from zope.interface import Interface
 
 
-# Gives 'nswdesignsystem.plone6.interfaces'. Doing it this way incase we move it later
+# Gives 'nswdesignsystem.plone6.interfaces'. Doing it this way in case we move it later
 SCHEMA_PREFIX = INSWDesignSystemSettings.__identifier__
 CONTROL_PANEL_TITLE = "NSW Design System Settings"
 

@@ -14,7 +14,7 @@ def serialize_data(json_data):
     try:
         return json_compatible(json.loads(json_data))
     except TypeError as e:
-        return json_compatible(json_data)
+        return json_compatible(e)
     except Exception as e:
         return json_compatible(e)
 

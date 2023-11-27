@@ -11,7 +11,7 @@
     <value>[{"rootPath": "Lower footer", "items": []}]</value>
   </record>
 
-  <!-- Setup control panel. Prefix defaults to path to inteface + interface name -->
+  <!-- Setup control panel. Prefix defaults to path to interface + interface name -->
   <records interface="nswdesignsystem.plone6.interfaces.INSWDesignSystemSettings" />
 
 
