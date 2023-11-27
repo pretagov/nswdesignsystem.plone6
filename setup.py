@@ -88,7 +88,6 @@ setup(
         "release": [
             "zest.releaser[recommended]",
             "zestreleaser.towncrier",
-            "zest.pocompile",
         ],
     },
     entry_points="""
