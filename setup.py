@@ -59,7 +59,6 @@ setup(
         "plone.api>=1.8.4",
         "plone.restapi",
         "plone.supermodel",
-        "Products.CMFPlone",
         "Products.GenericSetup",
         "collective.elasticsearch>=5.0.0",
         "collective.volto.formsupport",
