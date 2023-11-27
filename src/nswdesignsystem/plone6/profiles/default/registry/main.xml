@@ -1,11 +1,13 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <registry xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-  i18n:domain="nswdesignsystem.plone6">
+          i18n:domain="nswdesignsystem.plone6"
+>
 
   <!-- -*- extra stuff goes here -*- -->
-  <record name="collective.volto.subfooter.interfaces.ISubfooter.subfooter_configuration"
-    interface="collective.volto.subfooter.interfaces.ISubfooter"
-    field="subfooter_configuration">
+  <record field="subfooter_configuration"
+          interface="collective.volto.subfooter.interfaces.ISubfooter"
+          name="collective.volto.subfooter.interfaces.ISubfooter.subfooter_configuration"
+  >
     <value>[{"rootPath": "Lower footer", "items": []}]</value>
   </record>
 
