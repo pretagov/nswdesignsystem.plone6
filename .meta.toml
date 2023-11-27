@@ -8,5 +8,7 @@ commit-id = "8c30aa23"
 [gitignore]
 extra_lines = """
 **/robot_*.html
+robot_output.xml
 **/log.html
+**test_*/**/output.xml
 """
