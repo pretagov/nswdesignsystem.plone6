@@ -1,14 +1,13 @@
-# -*- coding: utf-8 -*-
 from plone.api.content import create as createContent
-from plone.api.content import get as getContent
 from plone.api.content import delete as deleteContent
+from plone.api.content import get as getContent
 from plone.api.portal import get as getPortal
-from Products.CMFPlone.interfaces import INonInstallable
+from plone.base.interfaces import INonInstallable
 from zope.interface import implementer
 
 
 @implementer(INonInstallable)
-class HiddenProfiles(object):
+class HiddenProfiles:
     def getNonInstallableProfiles(self):
         """Hide uninstall profile from site-creation and quickinstaller."""
         return [
@@ -73,7 +72,6 @@ def post_install(context):
 
 def uninstall(context):
     """Uninstall script"""
-    portal = getPortal()
     search_page = getContent(path="/search")
     if search_page:
         deleteContent(search_page)

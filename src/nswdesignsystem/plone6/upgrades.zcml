@@ -1,13 +1,17 @@
-<configure xmlns="http://namespaces.zope.org/zope"
-  xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
-  xmlns:i18n="http://namespaces.zope.org/i18n"
-  xmlns:plone="http://namespaces.plone.org/plone"
-  i18n_domain="nswdesignsystem.plone6">
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="nswdesignsystem.plone6"
+    >
 
-  <genericsetup:upgradeStep source="1000"
-    destination="1001"
-    title="Fix double registry records and refresh registry with new records from site settings interface"
-    profile="nswdesignsystem.plone6:default"
-    handler=".upgrades.upgrade_1000_to_1001" />
+  <genericsetup:upgradeStep
+      title="Fix double registry records and refresh registry with new records from site settings interface"
+      profile="nswdesignsystem.plone6:default"
+      source="1000"
+      destination="1001"
+      handler=".upgrades.upgrade_1000_to_1001"
+      />
 
 </configure>

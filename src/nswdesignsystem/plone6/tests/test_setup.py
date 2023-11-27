@@ -1,13 +1,14 @@
-# -*- coding: utf-8 -*-
 """Setup tests for this package."""
-import unittest
-
-from plone import api
-from plone.app.testing import TEST_USER_ID, setRoles
-
 from nswdesignsystem.plone6.testing import (  # noqa: E501
     NSWDESIGNSYSTEM_PLONE6_INTEGRATION_TESTING,
 )
+from plone import api
+from plone.app.testing import applyProfile
+from plone.app.testing import setRoles
+from plone.app.testing import TEST_USER_ID
+
+import unittest
+
 
 try:
     from plone.base.utils import get_installer
@@ -28,6 +29,9 @@ class TestSetup(unittest.TestCase):
         else:
             self.installer = api.portal.get_tool("portal_quickinstaller")
 
+        # TODO: Find out why the setup in `testing.py` isn't working for this profile install
+        applyProfile(self.portal, "nswdesignsystem.plone6:default")
+
     def test_product_installed(self):
         """Test if nswdesignsystem.plone6 is installed."""
         self.assertTrue(self.installer.is_product_installed("nswdesignsystem.plone6"))
@@ -43,15 +47,13 @@ class TestSetup(unittest.TestCase):
 
     def test_browserlayer(self):
         """Test that INswdesignsystemPlone6Layer is registered."""
-        from plone.browserlayer import utils
-
         from nswdesignsystem.plone6.interfaces import INswdesignsystemPlone6Layer
+        from plone.browserlayer import utils
 
         self.assertIn(INswdesignsystemPlone6Layer, utils.registered_layers())
 
 
 class TestUninstall(unittest.TestCase):
-
     layer = NSWDESIGNSYSTEM_PLONE6_INTEGRATION_TESTING
 
     def setUp(self):
@@ -71,8 +73,7 @@ class TestUninstall(unittest.TestCase):
 
     def test_browserlayer_removed(self):
         """Test that INswdesignsystemPlone6Layer is removed."""
-        from plone.browserlayer import utils
-
         from nswdesignsystem.plone6.interfaces import INswdesignsystemPlone6Layer
+        from plone.browserlayer import utils
 
         self.assertNotIn(INswdesignsystemPlone6Layer, utils.registered_layers())

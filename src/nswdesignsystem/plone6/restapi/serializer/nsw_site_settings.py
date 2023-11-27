@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from nswdesignsystem.plone6.interfaces import INSWDesignSystemSettings
 from plone.restapi.interfaces import ISerializeToJson
 from plone.restapi.serializer.controlpanels import ControlpanelSerializeToJson
@@ -15,7 +14,7 @@ def serialize_data(json_data):
     try:
         return json_compatible(json.loads(json_data))
     except TypeError as e:
-        return json_compatible(json_data)
+        return json_compatible(e)
     except Exception as e:
         return json_compatible(e)
 
@@ -24,7 +23,7 @@ def serialize_data(json_data):
 @adapter(INSWDesignSystemSettings)
 class INSWDesignSystemSettingsSerializeToJson(ControlpanelSerializeToJson):
     def __call__(self):
-        json_data = super(INSWDesignSystemSettingsSerializeToJson, self).__call__()
+        json_data = super().__call__()
         conf = json_data["data"].get("subfooter_configuration", "")
         if conf:
             json_data["data"]["subfooter_configuration"] = json.dumps(

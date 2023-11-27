@@ -1,10 +1,9 @@
-import logging
-
+from nswdesignsystem.plone6.interfaces import INSWDesignSystemSettings
 from plone.registry.interfaces import IRegistry
 from zope.component import getUtility
 from zope.schema import getFieldsInOrder
 
-from nswdesignsystem.plone6.interfaces import INSWDesignSystemSettings
+import logging
 
 
 logger = logging.getLogger(__name__)
