@@ -4,13 +4,6 @@
 >
 
   <!-- -*- extra stuff goes here -*- -->
-  <record field="subfooter_configuration"
-          interface="collective.volto.subfooter.interfaces.ISubfooter"
-          name="collective.volto.subfooter.interfaces.ISubfooter.subfooter_configuration"
-  >
-    <value>[{"rootPath": "Lower footer", "items": []}]</value>
-  </record>
-
   <!-- Setup control panel. Prefix defaults to path to interface + interface name -->
   <records interface="nswdesignsystem.plone6.interfaces.INSWDesignSystemSettings" />
 
