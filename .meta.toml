@@ -22,3 +22,6 @@ jobs = [
     "dependencies",
     "release_ready",
     ]
+
+[pyproject]
+dependencies_ignores = "['zestreleaser.towncrier', 'zest.releaser']"
