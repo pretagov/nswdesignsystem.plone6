@@ -65,6 +65,7 @@ setup(
         "collective.volto.formsupport[honeypot]",
         "collective.volto.subfooter==1.1.0",
         "ftw.tika @ git+ssh://git@github.com/pretagov/ftw.tika@python3#egg=ftw.tika", # GitHub link needed for python3 support until a release is done
+        "cusy.restapi.info @ git+ssh://git@github.com/pretagov/cusy.restapi.info@create_permission#egg=cusy.restapi.info", # Required for the permission install.
         # "ftw.tika>=2.10.0",
     ],
     extras_require={

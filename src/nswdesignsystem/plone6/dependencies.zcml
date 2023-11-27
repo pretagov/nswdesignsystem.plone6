@@ -9,6 +9,7 @@
   <include package="collective.elasticsearch" />
   <include package="collective.volto.formsupport" />
   <include package="collective.volto.subfooter" />
+  <include package="cusy.restapi.info" />
   <include package="ftw.tika" />
 
 </configure>
