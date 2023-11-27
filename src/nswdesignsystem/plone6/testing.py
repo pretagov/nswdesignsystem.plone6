@@ -11,7 +11,6 @@ import nswdesignsystem.plone6
 
 
 class NswdesignsystemPlone6Layer(PloneSandboxLayer):
-
     defaultBases = (PLONE_FIXTURE,)
 
     def setUpZope(self, app, configurationContext):
