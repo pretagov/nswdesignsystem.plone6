@@ -15,7 +15,7 @@ long_description = "\n\n".join(
 
 setup(
     name="nswdesignsystem.plone6",
-    version="0.4.1.dev0",
+    version="0.4.1",
     description="Plone backend package for the NSW Design system",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/

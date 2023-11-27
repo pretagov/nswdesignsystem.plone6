@@ -1,3 +1,13 @@
+0.4.1 (2023-11-27)
+------------------
+
+Internal:
+
+
+- Remove circular checker in CI
+  [@JeffersonBledsoe] (#17)
+
+
 Changelog
 =========
 
