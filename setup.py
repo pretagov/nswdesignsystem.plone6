@@ -85,6 +85,10 @@ setup(
             "robotsuite",
             "plone.app.robotframework[debug]",
         ],
+        "release": [
+            "zest.releaser[recommended]",
+            "zestreleaser.towncrier",
+        ],
     },
     entry_points="""
     [plone.autoinclude.plugin]
