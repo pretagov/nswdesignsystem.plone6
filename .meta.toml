@@ -4,3 +4,9 @@
 [meta]
 template = "default"
 commit-id = "8c30aa23"
+
+[gitignore]
+extra_lines = """
+**/robot_*.html
+**/log.html
+"""

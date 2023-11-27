@@ -45,6 +45,8 @@ var/
 /venv/
 .installed.txt
 
+**/robot_*.html
+**/log.html
 
 ##
 # Add extra configuration options in .meta.toml:
