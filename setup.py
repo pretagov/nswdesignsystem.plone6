@@ -53,23 +53,31 @@ setup(
         "setuptools",
         # -*- Extra requirements: -*-
         "z3c.jbot",
+        "plone.app.registry",
+        "plone.autoform",
+        "plone.base",
         "plone.api>=1.8.4",
-        "plone.app.dexterity",
+        "plone.restapi",
+        "plone.supermodel",
+        "Products.CMFPlone",
+        "Products.GenericSetup",
+        "collective.elasticsearch>=5.0.0",
         "collective.volto.formsupport",
         "collective.volto.formsupport[recaptcha]",
         "collective.volto.formsupport[honeypot]",
         "collective.volto.subfooter==1.1.0",
         "ftw.tika>=2.10.0",
-        "collective.elasticsearch>=5.0.0",
     ],
     extras_require={
         "test": [
             "plone.app.testing",
+            "plone.app.dexterity",
+            "plone.browserlayer",
             # Plone KGS does not use this version, because it would break
             # Remove if your package shall be part of coredev.
             # plone_coredev tests as of 2016-04-01.
             "plone.testing>=5.0.0",
-            "plone.app.contenttypes",
+            "robotsuite",
             "plone.app.robotframework[debug]",
         ],
     },
