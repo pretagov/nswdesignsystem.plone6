@@ -1,0 +1,2 @@
+Fixed exception handling when `@nswSiteSettings` serialization is a dictionary not a JSON string
+[@JeffersonBledsoe]
