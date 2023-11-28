@@ -1,3 +1,13 @@
+0.4.2 (2023-11-28)
+------------------
+
+Bug fixes:
+
+
+- Fixed exception handling when `@nswSiteSettings` serialization is a dictionary not a JSON string
+  [@JeffersonBledsoe] (#19)
+
+
 0.4.1 (2023-11-27)
 ------------------
 
