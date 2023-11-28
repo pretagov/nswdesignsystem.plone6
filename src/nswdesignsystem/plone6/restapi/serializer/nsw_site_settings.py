@@ -8,15 +8,33 @@ from zope.interface import implementer
 import json
 
 
-def serialize_data(json_data):
+def serialize_data(json_data, request):
     if not json_data:
         return ""
     try:
         return json_compatible(json.loads(json_data))
     except TypeError as e:
-        return json_compatible(e)
+        if isinstance(json_data, dict):
+            return json_compatible(json_data)
+        request.response.setStatus(400)
+        return json_compatible(
+            {
+                "error": {
+                    "type": "SerializationError",
+                    "message": str(e),
+                }
+            }
+        )
     except Exception as e:
-        return json_compatible(e)
+        request.response.setStatus(400)
+        return json_compatible(
+            {
+                "error": {
+                    "type": "SerializationError",
+                    "message": str(e),
+                }
+            }
+        )
 
 
 @implementer(ISerializeToJson)
@@ -27,6 +45,6 @@ class INSWDesignSystemSettingsSerializeToJson(ControlpanelSerializeToJson):
         conf = json_data["data"].get("subfooter_configuration", "")
         if conf:
             json_data["data"]["subfooter_configuration"] = json.dumps(
-                serialize_data(json_data=conf)
+                serialize_data(json_data=conf, request=self.request)
             )
         return json_data

@@ -49,4 +49,4 @@ class NSWSiteSettingsGet(Service):
         if not records:
             return {}
 
-        return serialize_data(json_data=records)
+        return serialize_data(json_data=records, request=self.request)
