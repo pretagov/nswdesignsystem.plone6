@@ -60,19 +60,11 @@ setup(
         "plone.restapi",
         "plone.supermodel",
         "Products.GenericSetup",
-        "collective.elasticsearch>=5.0.0",
         "collective.volto.formsupport",
         "collective.volto.formsupport[recaptcha]",
         "collective.volto.formsupport[honeypot]",
         "collective.volto.subfooter==1.1.0",
-        "ftw.tika @ git+https://github.com/pretagov/ftw.tika@python3#egg=ftw.tika",  # GitHub link needed for python3 support until a release is done
-        "cusy.restapi.info @ git+https://github.com/pretagov/cusy.restapi.info@create_permission#egg=cusy.restapi.info",  # Required for the permission install.
-        # "ftw.tika>=2.10.0",
     ],
-    # dependency_links=[
-    #     "https://github.com/pretagov/ftw.tika/tarball/python3#egg=ftw.tika"
-    #     "https://github.com/pretagov/cusy.restapi.info/tarball/create_permission/master#egg=cusy.restapi.info"
-    # ],
     extras_require={
         "test": [
             "plone.app.testing",
