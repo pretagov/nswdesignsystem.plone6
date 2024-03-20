@@ -5,6 +5,7 @@ from zope.component import adapter
 from zope.interface import implementer
 from zope.publisher.interfaces.browser import IBrowserRequest
 
+
 html2text_extractor = HTML2Text()
 # Remove the extra characters from formatted text
 html2text_extractor.emphasis_mark = ""
@@ -87,7 +88,7 @@ BLOCK_TYPE_EXTRACTOR_MAPPING = {
 
 @implementer(IBlockSearchableText)
 @adapter(IBlocks, IBrowserRequest)
-class NSWSearchableText(object):
+class NSWSearchableText:
     def __init__(self, context, request):
         self.context = context
         self.request = request
@@ -101,7 +102,7 @@ class NSWSearchableText(object):
 
 @implementer(IBlockSearchableText)
 @adapter(IBlocks, IBrowserRequest)
-class HeroSearchableText(object):
+class HeroSearchableText:
     def __init__(self, context, request):
         self.context = context
         self.request = request
