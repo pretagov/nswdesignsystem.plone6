@@ -1,0 +1,41 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="nswdesignsystem.plone6"
+    >
+
+  <!-- Covers the card block as we use cards as the replacement for the default grid in the frontend -->
+  <adapter
+      factory=".indexers.NSWSearchableText"
+      name="__grid"
+      />
+  <adapter
+      factory=".indexers.NSWSearchableText"
+      name="contentBlockGrid"
+      />
+
+  <adapter
+      factory=".indexers.NSWSearchableText"
+      name="callout"
+      />
+  <adapter
+      factory=".indexers.NSWSearchableText"
+      name="nsw_inPageAlert"
+      />
+  <adapter
+      factory=".indexers.NSWSearchableText"
+      name="nsw_announcementBar"
+      />
+  <adapter
+      factory=".indexers.NSWSearchableText"
+      name="nsw_linkList"
+      />
+
+  <!-- TODO: Contribute back to core -->
+  <adapter
+      factory=".indexers.HeroSearchableText"
+      name="hero"
+      />
+
+</configure>

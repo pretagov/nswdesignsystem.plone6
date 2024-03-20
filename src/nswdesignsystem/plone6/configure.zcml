@@ -17,6 +17,7 @@
   <include file="upgrades.zcml" />
   <include package=".browser" />
   <include package=".restapi" />
+  <include package=".blocks" />
 
   <include file="permissions.zcml" />
 
