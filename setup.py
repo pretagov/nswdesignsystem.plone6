@@ -1,8 +1,6 @@
 """Installer for the nswdesignsystem.plone6 package."""
 
-from setuptools import find_packages
-from setuptools import setup
-
+from setuptools import find_packages, setup
 
 long_description = "\n\n".join(
     [
@@ -64,6 +62,7 @@ setup(
         "collective.volto.formsupport[recaptcha]",
         "collective.volto.formsupport[honeypot]",
         "collective.volto.subfooter==1.1.0",
+        "html2text",  # Needed for adding blocks with HTML to the searchable text index
     ],
     extras_require={
         "test": [
