@@ -1,3 +1,13 @@
+0.4.4.dev1 (2024-03-20)
+-----------------------
+
+New features:
+
+
+- Added support for indexing custom blocks
+  [@JeffersonBledsoe] (#21)
+
+
 0.4.3 (2023-12-13)
 ------------------
 
