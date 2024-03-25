@@ -66,7 +66,7 @@ def extract_column_data(block_data):
     data = []
 
     for column in block_data.get("columns", []):
-        extractor = BLOCK_TYPE_EXTRACTOR_MAPPING[column["@type"]]
+        extractor = BLOCK_TYPE_EXTRACTOR_MAPPING.get(column.get("@type"))
         if not extractor:
             continue
         data.append(extractor(column))
