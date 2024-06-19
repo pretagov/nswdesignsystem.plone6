@@ -21,5 +21,12 @@
       destination="1002"
       import_steps="plone.app.registry"
       />
+  <genericsetup:upgradeDepends
+      title="Add Email, WeChat and Instagram social links"
+      profile="nswdesignsystem.plone6:default"
+      source="1002"
+      destination="1003"
+      import_steps="plone.app.registry"
+      />
 
 </configure>

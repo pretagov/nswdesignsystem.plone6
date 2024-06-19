@@ -33,8 +33,20 @@ class INSWDesignSystemSettings(ISocialMediaSchema):
     # SOCIAL FIELDSET
     directives.omitted("share_social_data")
     directives.omitted("facebook_app_id")
+    instagram_url = ASCIILine(
+        title="Instagram URL",
+        required=False,
+    )
     linkedin_url = ASCIILine(
         title="LinkedIn URL",
+        required=False,
+    )
+    mail_link = ASCIILine(
+        title="Mail address",
+        required=False,
+    )
+    we_chat_url = ASCIILine(
+        title="WeChat URL",
         required=False,
     )
     youtube_url = ASCIILine(
@@ -136,6 +148,9 @@ social_fields = [
     ],
     "linkedin_url",
     "youtube_url",
+    "instagram_url",
+    "mail_link",
+    "we_chat_url",
 ]
 
 INSWDesignSystemSettings.setTaggedValue(
