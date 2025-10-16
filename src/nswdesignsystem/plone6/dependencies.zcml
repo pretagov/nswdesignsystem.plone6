@@ -10,6 +10,7 @@
   <include package="plone.app.contenttypes" />
   <include package="plone.app.discussion" />
   <include package="plone.app.caching" />
+  <include package="cusy.restapi.info" />
   <include package="collective.volto.formsupport" />
   <include package="collective.volto.subfooter" />
   <include package="collective.volto.formsupport" />
