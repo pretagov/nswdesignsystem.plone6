@@ -21,6 +21,17 @@
       name="@nswSiteSettings"
       />
 
+  <!-- Expandable on any content request: ?expand=nswSiteSettings,subfooter -->
+  <adapter
+      factory=".get.NSWSiteSettings"
+      name="nswSiteSettings"
+      />
+
+  <adapter
+      factory=".subfooter.Subfooter"
+      name="subfooter"
+      />
+
   <!-- TODO: Caching rules for response -->
   <!-- <cache:ruleset ruleset="plone.content.dynamic" for=".get.NSWSiteSettingsGet" /> -->
 
