@@ -1,0 +1,2 @@
+Declared the missing `plone.volto`, `cusy.restapi.info`, `plone.app.caching`, `plone.app.contenttypes` and `plone.app.discussion` dependencies
+[@instification]

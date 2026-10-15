@@ -65,6 +65,12 @@ setup(
         "collective.volto.formsupport[recaptcha]",
         "collective.volto.formsupport[honeypot]",
         "collective.volto.subfooter==1.1.0",
+        # Included in dependencies.zcml and installed by the default profile
+        "cusy.restapi.info",
+        "plone.app.caching",
+        "plone.app.contenttypes",
+        "plone.app.discussion",
+        "plone.volto",
         "html2text",  # Needed for adding blocks with HTML to the searchable text index
     ],
     extras_require={
@@ -78,6 +84,8 @@ setup(
             "plone.testing>=5.0.0",
             "robotsuite",
             "plone.app.robotframework[debug]",
+            # collective.volto.formsupport's upgrade steps need it but don't declare it
+            "plone.app.upgrade",
         ],
         "release": [
             "zest.releaser[recommended]",
