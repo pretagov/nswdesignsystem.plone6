@@ -27,5 +27,5 @@ jobs = [
 dependencies_ignores = "['zestreleaser.towncrier', 'zest.releaser', 'plone.app.upgrade']"
 
 [tox]
-# Not on PyPI; the pretagov fork is public, at the rev nsw-dds-plone uses
-test_deps_additional = "cusy.restapi.info @ git+https://github.com/pretagov/cusy.restapi.info.git@1b65fa6db1f752e395ad663113c24861d2c104d8"
+# Not on PyPI; the pretagov fork is public
+test_deps_additional = "cusy.restapi.info @ git+https://github.com/pretagov/cusy.restapi.info.git@main"
